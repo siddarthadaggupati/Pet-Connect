@@ -13,7 +13,7 @@ dotenv.config();
 app.use(express.json());
 app.use(cors(
     {
-        origin : ["https://client-sigma-teal.vercel.app"],
+        origin : ["https://client-omega-lyart.vercel.app"],
         methods : ["POST","GET"],
         credentials : true
     }
