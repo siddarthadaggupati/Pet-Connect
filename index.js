@@ -140,8 +140,6 @@ app.post('/adoptdata', async (req,res)=>{
         console.log(e)
     }
 })
-<<<<<<< HEAD
-
 app.post('/addproduct', async (req,res)=>{
     try{
         const col3 = db.collection('products')
@@ -153,5 +151,3 @@ app.post('/addproduct', async (req,res)=>{
     }
 
 })
-=======
->>>>>>> 8e61a082e70834be3d9ef98dd91a29f6e4c558cd
