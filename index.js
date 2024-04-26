@@ -27,6 +27,9 @@ const col = db.collection('user-data')
 // using routes
 app.use("/api/payment/", paymentRoutes);
 
+app.get("/", (req,res)=>{
+    console.log("Hello WOrld")
+})
 app.post('/insert', async (req,res)=>{
     try{
         const user = await col.findOne({email:req.body.email})
