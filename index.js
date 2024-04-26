@@ -11,7 +11,13 @@ dotenv.config();
 
 // middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin : ["https://client-sigma-teal.vercel.app/"],
+        methods : ["POST","GET"],
+        credentials : true
+    }
+));
 
 client = new MongoClient('mongodb+srv://admin:admin@cluster0.rbtlcxt.mongodb.net/?retryWrites=true&w=majority')
 client.connect();
