@@ -97,18 +97,18 @@ app.post('/api/sendMail',async (req,res)=>{
 
 app.post('/sendmessage', async (req, res) => {
     try {
-        var accountSid = 'AC31cf9d203e9d21849fac2a1229c37cbc';
-        var authToken = '999670d633ca998f17c0ba8b6cc191fa';
+        var accountSid = 'ACeaf3703aec504e94a67c7e65e1c680cb';
+        var authToken = 'f56a6d0359250cf738481afcc75c7206';
 
         // require the Twilio module and create a REST client
         var client = require('twilio')(accountSid, authToken);
 
         // Format the phone number to E.164 format
-        var phoneNumber = `+919000834981`;
+        var phoneNumber = `+917981864952`;
 
         client.messages.create({
             to: phoneNumber,
-            from: "+17815177491",
+            from: "+13256030719",
             body: "Thank you for choosing the pet connect, You Have been short listed for the adoption",
         })
         .then(message => {
@@ -137,3 +137,18 @@ app.post('/adoptdata', async (req,res)=>{
         console.log(e)
     }
 })
+<<<<<<< HEAD
+
+app.post('/addproduct', async (req,res)=>{
+    try{
+        const col3 = db.collection('products')
+        await col3.insertOne(req.body);
+        res.send("datareceived")
+    }
+    catch(e){
+        console.log(e)
+    }
+
+})
+=======
+>>>>>>> 8e61a082e70834be3d9ef98dd91a29f6e4c558cd
